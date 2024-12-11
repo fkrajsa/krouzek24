@@ -1,2 +1,2 @@
-# krou-ek24
+# kroužek24
 Kódy z hodin kroužku programování
