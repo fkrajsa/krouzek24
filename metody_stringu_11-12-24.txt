@@ -1,0 +1,42 @@
+// téma : METODY STRINGŮ - 11.12.2024 - NEPŘEPISOVAT , NEMAZAT !!! // 
+
+/*String ahoj;
+ahoj = "letadlo";
+string auto = "reklama";
+Console.WriteLine("zadejte prvni cislo");
+string cislo1 = Console.ReadLine();
+int cisloint1 = Convert.ToInt32(cislo1);
+Console.WriteLine("zadejte druhe cislo");
+string cislo2 = Console.ReadLine();
+int cisloint2 = Convert.ToInt32(cislo2);
+
+int vysledeksouctu = (cisloint1 + cisloint2);
+Console.WriteLine($"soucet = {vysledeksouctu}");
+Console.WriteLine(cisloint1- cisloint2);
+Console.WriteLine(cisloint1 * cisloint2);
+Console.WriteLine(cisloint1/ cisloint2);
+Console.WriteLine(cisloint1 % cisloint2);
+*/
+string celejmeno = "Tomáš Novák";
+string teelfonnicislo = "731-266-998";
+celejmeno = celejmeno.ToUpper();
+teelfonnicislo = teelfonnicislo.Replace("-" , "/");
+string upravjmena = celejmeno.Insert(0, "Mr. ");
+
+Console.WriteLine(celejmeno);
+Console.WriteLine(teelfonnicislo);
+Console.WriteLine(upravjmena);
+
+string prvnijmeno = celejmeno.Substring(0, 5);
+string prijmeni = celejmeno.Substring(6, 5);
+Console.WriteLine(prvnijmeno);
+Console.WriteLine(prijmeni);
+
+Console.WriteLine(celejmeno.Length);
+
+
+
+
+
+
+

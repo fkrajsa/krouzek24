@@ -1,0 +1,91 @@
+// téma : PODMÍNKY 11.12.2024  - NEPŘEPISOVAT !!! // 
+/*Console.WriteLine("Zadejte svůj věk");
+int Vek = Convert.ToInt32(Console.ReadLine());
+
+if (Vek >= 110)
+{
+    Console.WriteLine("Jsi moc starý");
+}
+else if (Vek >= 18)
+{
+    Console.WriteLine("Jsi úspěšně mladý a přihlášený");
+}
+else if ((Vek <= 0))
+    {
+    Console.WriteLine("Ještě jsi se nenarodil");
+}
+else
+{
+    Console.WriteLine("Musí ti být víc než 18 let ! ");
+}
+*/
+
+/*Console.WriteLine("Zadej své jméno");
+string Jmeno = Console.ReadLine();
+
+if (Jmeno != "")
+{
+    Console.WriteLine("Ahoj " + Jmeno); // složitější zápis : Console.WriteLine($Ahoj {Jmeno} !;
+}
+else
+{
+    Console.WriteLine("Nezadal jsi svoje jméno, naprav to!");
+}
+*/
+
+Console.WriteLine("Co je dnes za den?");
+string den = Console.ReadLine();
+
+switch (den)
+{
+    case "Pondeli":
+        Console.WriteLine("Dnes je pondělí");
+        break;
+
+    case "Úterý":
+        Console.WriteLine("Dnes je Úterý");
+        break;
+    case "Středa":
+        Console.WriteLine("Dnes je Středa");
+        break;
+    case "Čtvrtek":
+        Console.WriteLine("Dnes je Čtvrtek");
+        break;
+    case "Pátek":
+        Console.WriteLine("Dnes je Pátek");
+        break;
+    case "Sobota":
+        Console.WriteLine("Dnes je Sobota");
+        break;
+    case "Neděle":
+        Console.WriteLine("Dnes je Neděle");
+        break;
+    default:
+        Console.WriteLine(den + "Není žádný den");
+        break;
+
+}
+
+// Logical operators - logické operátory
+//&& (and) a 
+//  || (or) nebo
+
+Console.WriteLine("Jaká je venku teplota?: (C)");
+double teplota = Convert.ToDouble(Console.ReadLine());
+
+if (teplota >= 10 && teplota <= 20) 
+{
+    Console.WriteLine("Venku je teplo");
+}
+else if  (teplota <= -50 || teplota >= 50)
+{
+    Console.WriteLine("Je tam velká zima, nechoď ven!");
+}
+else if (teplota <= 5)
+{
+    Console.WriteLine("Vzal bych si bundu");
+}
+else
+{
+    Console.WriteLine("Nezadáno správné číslo");
+}
