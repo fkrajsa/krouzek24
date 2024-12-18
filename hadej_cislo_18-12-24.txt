@@ -1,0 +1,47 @@
+// téma : hra: HÁDEJ ČÍSLO - 18.12.2024 - NEPŘEPISOVAT , NEMAZAT !!! // 
+
+int uzivatel;
+bool prepinac = true;
+Random random = new Random();
+int pokusy;
+int nahodnecislo;
+string pokracovat;
+int min = 1;
+int max = 100;
+while (prepinac == true)
+{
+    uzivatel = 0;
+    pokusy = 0;
+    nahodnecislo = random.Next(min, max);
+
+    while(uzivatel != nahodnecislo)
+    {
+        Console.WriteLine("Uhádni čislo mezi" + min +  "a" + max);
+        uzivatel = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Tvůj tip : " + uzivatel);
+        if (uzivatel > nahodnecislo)
+        {
+            Console.WriteLine("Moc velké čislo");
+        }
+        else if (uzivatel > nahodnecislo)
+        {
+            Console.WriteLine("Moc malé čislo");
+        }
+        pokusy++;
+    }
+    Console.WriteLine("náhodné čislo bylo: " + nahodnecislo);
+    Console.WriteLine("Uhádl jsi správné číslo!");
+    Console.WriteLine("Pokusy: " + pokusy);
+    Console.WriteLine("Chceš pokračovat? ");
+    pokracovat = Console.ReadLine();
+    pokracovat = pokracovat.ToUpper();
+    if(pokracovat == "Y")
+    {
+        prepinac = true;
+    }
+    else
+    {
+        prepinac = false;
+        Console.WriteLine("Díky za hru!");
+    }
+}

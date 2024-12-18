@@ -1,0 +1,38 @@
+// téma : LOOPY (cykly) - 18.12.2024 - NEPŘEPISOVAT , NEMAZAT !!! // 
+bool prepinac = true;
+
+Console.WriteLine("Zadejte své jméno: ");
+string vystup = Console.ReadLine();
+
+while (vystup == "")
+{
+    Console.WriteLine("Zadejte své jméno: ");
+    vystup = Console.ReadLine();
+}
+Console.WriteLine("Ahoj" + vystup);
+
+//For loops
+for (int i = 1; i <= 10; i++)
+{
+    Console.WriteLine("Pozdrav čislo: " + i);
+
+}
+
+//nested loops (loopy v loopech - cykly v cyklech)
+Console.WriteLine("Zadej počet opakování");
+string opakovani = Console.ReadLine();
+int opakovanicislo = Convert.ToInt32(opakovani);
+Console.WriteLine("Zadej kolikrát zprávu poslat během jednoho opakování");
+string zprava  = Console.ReadLine();
+int zpravacislo = Convert.ToInt32(zprava);
+Console.WriteLine("zadej co se má poslat");
+string text = Console.ReadLine();
+
+for (int i = 1; i < opakovanicislo; i++)
+{
+    for (int j = 0; j < zpravacislo; j++)
+    {
+        Console.WriteLine(text);
+    }
+    Console.WriteLine();
+}
