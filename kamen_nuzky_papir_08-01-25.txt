@@ -1,0 +1,119 @@
+
+Random random = new Random();
+bool znovuhrat = true;
+string hrac = "";
+string computer = "";
+string odpoved = "";
+
+while (znovuhrat)
+{
+    Console.Write("Zadej Kámen/Nůžky/Papír ve formátu K/N/P: ");
+    hrac = "";
+    computer = "";
+    odpoved = "";
+    hrac = Console.ReadLine().ToUpper();
+     
+
+
+
+    while (hrac != "K" && hrac != "N" && hrac != "P")
+    {
+        Console.WriteLine("Zadej Kámen/Nůžky/Papír ve formátu K/N/P: ");
+        hrac = Console.ReadLine().ToUpper();
+    }
+    switch (hrac)
+    {
+        case "N":
+            hrac = "Nůžky";
+            break;
+        case "K":
+            hrac = "Kámen";
+            break;
+        case "P":
+            hrac = "Papír";
+            break;
+        default:
+            break;
+    }
+
+
+    switch (random.Next(1, 4))
+    {
+        case 1:
+            computer = "Nůžky";
+            break;
+        case 2:
+            computer = "Kámen";
+            break;
+        case 3:
+            computer = "Papír";
+            break;
+    }
+    Console.WriteLine("Počítač: " + computer);
+    Console.WriteLine("hráč: " + hrac);
+
+    switch (hrac)
+    {
+        case "Kámen":
+            if (computer == "Kámen")
+            {
+                Console.WriteLine("Remíza");
+            }
+            else if (computer == "Papír")
+            {
+                Console.WriteLine("Bot vyhrál");
+            }
+            else
+            {
+                Console.WriteLine("Hráč vyhrál");
+            }
+            break;
+
+        case "Papír":
+            if (computer == "Papír")
+            {
+                Console.WriteLine("Remíza");
+            }
+            else if (computer == "Nůžky")
+            {
+                Console.WriteLine("Bot vyhrál");
+            }
+            else
+            {
+                Console.WriteLine("Hráč vyhrál");
+            }
+
+            break;
+        case "Nůžky":
+            if (computer == "Nůžky")
+            {
+                Console.WriteLine("Remíza");
+            }
+            else if (computer == "Kámen")
+            {
+                Console.WriteLine("Bot vyhrál");
+            }
+            else
+            {
+                Console.WriteLine("Hráč vyhrál");
+            }
+            break;
+
+    }
+    while (!(odpoved == "A" || odpoved == "N"))
+    {
+        Console.WriteLine("chceš hrát znovu? A/N ");
+        odpoved = Console.ReadLine().ToUpper();
+        if (odpoved == "A")
+        {
+            Console.Clear();
+            continue;
+
+        }
+        else if (odpoved == "N")
+        {
+            znovuhrat = false;
+            Console.WriteLine("děkuju za hraní hry kámen nůžky papír!");
+        }
+    }
+}
